@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "VerHomeSinRegistrar";
+}
+
+<h2>Home</h2>
+
+<br />
+<div class="list-group">
+    <div class="list-group-item">
+        <p>Importar usuarios a la base de datos via documento de texto:</p>
+        <button onclick="location.href='@Url.Action("ImportarUsuarios", "Common")';return false;" class="btn btn-default">Importar Usuarios</button>
+    </div>
+
+    <div class="list-group-item">
+        <p>Importar proyectos a la base de datos via documento de texto:</p>
+        <button onclick="location.href='@Url.Action("ImportarProyectos", "Common")';return false;" class="btn btn-default">Importar Proyectos</button>
+    </div>
+
+    <div class="list-group-item">
+        <p>Registrar un nuevo inversor en la base de datos:</p>
+        <button onclick="location.href='@Url.Action("IrARegistrarInversor", "HomeSinRegistrar")';return false;" class="btn btn-default">Registrar Inversor</button>
+    </div>
+
+    <div class="list-group-item">
+        <p>Ingresar como usuario previamente registrado:</p>
+        <button onclick="location.href='@Url.Action("IrALogin", "HomeSinRegistrar")';return false;" class="btn btn-default">Ingresar</button>
+    </div>
+</div>

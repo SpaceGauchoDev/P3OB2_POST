@@ -1,0 +1,100 @@
+﻿@model IEnumerable<MVC_Presentacion.ServicioImportacionesRef.DtoProyecto>
+
+@{
+    ViewBag.Title = "ImportarProyectos";
+}
+
+<h2>Proyectos: </h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ImgURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdSolicitante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDeEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadDeIntegrantes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExperienciaPersonal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDePresentacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoConseguido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoSolicitado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PorcentajeDeInteres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cuotas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioPorCuota)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img id="@item.ImgURL" src="~/img_proy2/@item.ImgURL" height="100"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdSolicitante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadDeIntegrantes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExperienciaPersonal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDePresentacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoConseguido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoSolicitado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PorcentajeDeInteres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cuotas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioPorCuota)
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Atras", "VolverAHome")
+</div>

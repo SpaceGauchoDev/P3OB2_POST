@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "VerHomeInversor";
+}
+
+<h2>Home Inversor</h2>
+
+<br />
+<div class="list-group">
+    <div class="list-group-item">
+        <p>Importar usuarios a la base de datos via documento de texto:</p>
+        <button onclick="location.href='@Url.Action("ImportarUsuarios", "Common")';return false;" class="btn btn-default">Importar Usuarios</button>
+    </div>
+
+    <div class="list-group-item">
+        <p>Importar proyectos a la base de datos via documento de texto:</p>
+        <button onclick="location.href='@Url.Action("ImportarProyectos", "Common")';return false;" class="btn btn-default">Importar Proyectos</button>
+    </div>
+
+    <div class="list-group-item">
+        <p>Buscar proyectos para financiar:</p>
+        <button onclick="location.href='@Url.Action("BuscarProyectos", "HomeInversor")';return false;" class="btn btn-default">Buscar Proyectos</button>
+    </div>
+
+    <div class="list-group-item">
+        <p>Ver todas las financiaciones a proyectos de este inversor:</p>
+        <button onclick="location.href='@Url.Action("VerFinanciaciones", "HomeInversor")';return false;" class="btn btn-default">Ver Financiaciones</button>
+    </div>
+
+    <div class="list-group-item">
+        <button onclick="location.href='@Url.Action("Logout", "Common")';return false;" class="btn btn-default">Logout</button>
+    </div>
+</div>
+
